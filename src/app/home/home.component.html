@@ -1,9 +1,72 @@
-﻿<div class="card mt-4">
+﻿<div class="card mt-4 pb-3 mb-4">
     <h4 class="card-header">You're logged in to RiverX!!</h4>
     <div class="card-body">
         <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
         <ul *ngIf="users">
             <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
         </ul>
+    </div>
+    <div class="col-12">
+        <div class="card card-cls bg-dark">
+            <div class="card-header">Flowline Dimension</div>
+            <div class="card-body">
+                <div class="row form-group">
+                    <div class="col-6 ">
+                        Outer Diameter
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" [(ngModel)]="flowLineDimensions.outerDiameter">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-6">
+                        Wall Thickness
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" [(ngModel)]="flowLineDimensions.wallThickness">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-6">
+                        Corrosion Coating Thickness
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" [(ngModel)]="flowLineDimensions.corrosionCoatingThickness">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-6">
+                        Concrete Thickness
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" [(ngModel)]="flowLineDimensions.concreteThickness">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-6">
+                        Pipe Surface Roughness
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" [(ngModel)]="flowLineDimensions.pipeSurfaceRoughness">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-6">
+                        Amplification Factor (Drag)
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" [(ngModel)]="flowLineDimensions.amplificationFactorDrag">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-6">
+                        Amplification Factor (Lift)
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" [(ngModel)]="flowLineDimensions.amplificationFactLift">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
